@@ -13,7 +13,8 @@ e=0
 
 #commands:
 #a-e: save r to a through e
-#A-E save a-e to r 
+#A-E: save a-e to r 
+#): r to int
 #?: send input to r
 #=: save the result of if a == b to c
 #+: add a and b, save to c
@@ -43,6 +44,8 @@ for i in inp:
         r=d
     if i=="E":
         r=e
+    if i==")":
+        r=int(r)
     if i=="?":
         c=input("?")
     if i=="=":
