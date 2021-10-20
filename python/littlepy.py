@@ -22,6 +22,7 @@ e=0
 #*: multiply a and b, save to c
 #/: divide a and b, save to c
 #!: prints r
+#0-9: save 0-9 into r
 
 for i in inp:
     if i=="a":
@@ -47,7 +48,7 @@ for i in inp:
     if i==")":
         r=int(r)
     if i=="?":
-        c=input("?")
+        r=input("?")
     if i=="=":
         c=a==b
     if i=="+":
@@ -60,3 +61,5 @@ for i in inp:
         c=a/b
     if i=="!":
         print(r)
+    if i in "0123456789":
+        r=int(i)
